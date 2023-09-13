@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html >
+<head>
+
+<style>
+body {
+  background-image: url({{ url_for('static', filename='templates/register.jpeg') }})
+
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+
+a:link, a:visited {
+  background-color: #dc2a2a;
+  padding: 15px 25px;
+  color: white;
+  text-align: center;
+  display: inline-block;
+
+}
+
+a:hover, a:active {
+  background-color: red;
+}
+
+
+
+
+
+
+</style>   
+</head>
+
+<body background="{{ url_for('static', filename='register.jpeg') }}">
+ <div class="login" align="center">
+	<b><font  style="color:rgb(244, 191, 166)" "font-family:verdana" size="5"><h1>REGISTER</h1></font></b>
+
+     <!-- Main Input For Receiving Query to our ML -->
+  
+	<br>
+    <form action="{{ url_for('register')}}"method="post">
+    	<input type="text" name="user_name " placeholder="user_name" required="required" /><br><br><br>
+        <input type="password" value="FakePSW" id="myInput" name="password" placeholder="password" required="required" /><br><br><br>
+
+		
+        <button type="submit" class="btn btn-primary btn-block btn-large" >Register</button><br><br>
+   
+       
+    </form>
+  
+<br><br>
+	<b><font  style="color:rgb(244, 191, 166)" "font-family:verdana" size="6">{{text}}</font></b><br><br><br><br>
+        <a href='/login'>Login</a><br><br>
+
+
+ </div>
+
+
+</body>
+</html>
